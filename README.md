@@ -2,7 +2,7 @@
 
 A local, offline day planner for Windows. Tasks sit on a day timeline with start and end times, estimates, subtasks, a start/pause timer and repeats. Everything is stored on your PC; there is no account and no network use.
 
-Design: [Falcon To-Do in Figma](https://www.figma.com/design/obIlzwUQmEg86gsyjdcEZr/Falcon-To-Do) · User stories: [Falcon To-Do — User Stories](https://claude.ai/artifact/PYW1RFqwtiPY9C4odbYhbm)
+User stories: [Falcon To-Do — User Stories](https://claude.ai/artifact/PYW1RFqwtiPY9C4odbYhbm)
 
 ## Features (release 1)
 
