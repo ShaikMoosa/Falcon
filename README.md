@@ -2,6 +2,8 @@
 
 A local, offline day planner for Windows. Tasks sit on a day timeline with start and end times, estimates, subtasks, a start/pause timer and repeats. Everything is stored on your PC; there is no account and no network use.
 
+**[Download the latest installer for Windows](https://github.com/ShaikMoosa/Falcon/releases/latest)** (Windows 10 and 11, 7 MB)
+
 User stories: [Falcon To-Do — User Stories](https://claude.ai/artifact/PYW1RFqwtiPY9C4odbYhbm)
 
 ## Screenshots
