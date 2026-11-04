@@ -351,9 +351,10 @@ export function DayView() {
   const first = layout.items[0];
   const last = layout.items[layout.items.length - 1];
   const empty = day.length === 0;
-  const barTop = empty || !first ? 0 : layout.listTop + first.top - 32;
+  // The bar starts up to 32px above the first card (as in the design) but never above the scroll area.
+  const barTop = empty || !first ? 0 : Math.max(0, layout.listTop + first.top - 32);
   const barStyle =
-    empty || !first ? { top: 0, bottom: 39 } : { top: barTop, height: last.bottom - first.top + 59 };
+    empty || !first ? { top: 0, bottom: 39 } : { top: barTop, height: layout.listTop + last.bottom + 27 - barTop };
 
   let tooltip: { y: number; text: string; ok: boolean; offsetX: number } | null = null;
   if (inter?.kind === "drag") {

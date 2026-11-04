@@ -4,6 +4,20 @@ A local, offline day planner for Windows. Tasks sit on a day timeline with start
 
 User stories: [Falcon To-Do — User Stories](https://claude.ai/artifact/PYW1RFqwtiPY9C4odbYhbm)
 
+## Screenshots
+
+The day view: the timeline labels are each card's start and end time, the progress bar counts finished tasks, and the blue pause icon marks the running timer.
+
+![Falcon day view with a sample day of tasks](docs/screenshots/day-view.png)
+
+Dragging a card to a new time. The other cards close up, a dashed slot shows where it lands, and the timeline previews the new times in blue.
+
+![Dragging "Lunch with Priya" to 16:00–17:00](docs/screenshots/drag-to-reschedule.png)
+
+Adding a task. Start and end times default to the next free slot.
+
+![Add Task form](docs/screenshots/add-task.png)
+
 ## Features (release 1)
 
 - Day view with previous/next day, a date picker and a daily progress bar

@@ -215,19 +215,17 @@ select {
 
 /* ---------- Day scroll area ---------- */
 
-/* Starts 14px under the progress bar so the timeline's sun cap can sit 32px above the first card. */
 .scroll {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
-  margin-top: -14px;
 }
 
 .day {
   position: relative;
   min-height: 100%;
-  padding: 32px var(--right) 40px var(--left);
+  padding: 18px var(--right) 40px var(--left);
 }
 
 .timeline {

@@ -76,6 +76,16 @@ export function TaskModal() {
 
   useEffect(() => titleRef.current?.focus(), []);
 
+  // Esc closes the form wherever focus is (it may have left the fields).
+  const closeRef = useRef<() => void>(() => {});
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && !useStore.getState().scopePrompt) closeRef.current();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   const dirty =
     title !== initial.title ||
     date !== initial.date ||
@@ -89,6 +99,7 @@ export function TaskModal() {
     JSON.stringify(subtasks) !== JSON.stringify(initial.subtasks);
 
   const requestClose = () => (dirty ? setConfirmDiscard(true) : closeModal());
+  closeRef.current = requestClose;
 
   const isoDate = displayToISO(date);
   const errors: Errors = {};
@@ -171,10 +182,6 @@ export function TaskModal() {
         aria-modal
         aria-labelledby="modal-title"
         onKeyDown={(e) => {
-          if (e.key === "Escape") {
-            e.stopPropagation();
-            requestClose();
-          }
           if (e.key === "Enter" && e.ctrlKey) {
             e.preventDefault();
             void submit();
